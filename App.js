@@ -8,12 +8,12 @@ class App extends React.Component {
     this.state = {
       colors: [
         'red',
-        '#ff7f00',
+        'orange',
         'yellow',
-        'rgb(0, 255, 0)',
+        'green',
         'blue',
-        '#4b0082',
-        '#8b00ff',
+        'indigo',
+        'violet',
       ],
     };
   }
@@ -29,11 +29,11 @@ class App extends React.Component {
 
   render() {
     const views = this.state.colors.map(color => (
-      <View key={color} style={{ flex: 1, backgroundColor: color }} />
+      <View key={color} style={[styles.container, styles[`${color}Container`]]} />
     ));
 
     return (
-      <View style={{ flex: 1 }}>
+      <View style={styles.container}>
         {views}
       </View>
     );
@@ -42,13 +42,29 @@ class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 2,
+    flex: 1,
+  },
+  redContainer: {
     backgroundColor: 'red'
   },
+  orangeContainer: {
+    backgroundColor: '#ff7f00',
+  },
+  yellowContainer: {
+    backgroundColor: 'yellow',
+  },
   greenContainer: {
-    flex: 8,
-    backgroundColor: 'green'
-  }
+    backgroundColor: 'rgb(0, 255, 0)',
+  },
+  blueContainer: {
+    backgroundColor: 'blue',
+  },
+  indigoContainer: {
+    backgroundColor: '#4b0082',
+  },
+  violetContainer: {
+    backgroundColor: '#8b00ff',
+  },
 });
 
 export default App;
