@@ -8,6 +8,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web"
   },
+  "author": "nbkhope",
+  "license": "MIT",
   "dependencies": {
     "expo": "~47.0.12",
     "expo-status-bar": "~1.4.2",
